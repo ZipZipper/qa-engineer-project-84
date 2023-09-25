@@ -1,0 +1,9 @@
+---
+test-cases:
+  - summary: |
+      Проверка видимости товаров которых нет в наличии 
+    status: pass
+  - summary: |
+      Проверка добавления товара в корзину
+    status: pass
+bugreports: []
