@@ -1,0 +1,15 @@
+---
+- summary: |
+    Не отображается значок смены языка на 'English'
+  environment: |
+    Google Chrome   117.0.5938.89 (Официальная сборка) (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    2. Нажать на параметр смена языка
+  expected-result: |
+    В параметре должны отображаться картинки 
+  actual-result: |
+    В параметре отображается картинка 'Russian'
+    Картинка 'English' отображается не кореткно
+    Ошибка изображена на скриншоте assets/bug.png
