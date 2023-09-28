@@ -6,4 +6,27 @@ test-cases:
   - summary: |
       Проверка добавления товара в корзину
     status: pass
-bugreports: []
+bugreports:
+  - summary: |
+      Отсутсвует возможность просмотра продолженить просмотр описания в карточке товара
+    environment: |
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/коммит/Google Chrome 117.0.5938.89 (Официальная сборка) (64 бит), Windows 10
+    steps-to-reproduce: |
+      - Отркыть страницу магазина 
+      - Открыть карточку товара Iphone X
+    expected-result: |
+      Возможность смотреть продолжение описания
+    actual-result: |
+      Нету возможности просмотреть продолжение описания товара
+      
+  - summary: |
+      Отсутсвует название в ктегории товаров для пунка 'Все' 
+    environment: |
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/описание/Google Chrome 117.0.5938.89 (Официальная сборка) (64 бит), Windows 10
+    steps-to-reproduce: |
+      - Открыть страницу магазина 
+      - Нажать на кнопку категории/category
+    expected-result: |
+      Название вместо пустого пунка
+    actual-result: |
+      Отсутствие названия в пункте для категории "все/all"
