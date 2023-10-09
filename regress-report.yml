@@ -1,4 +1,5 @@
 ---
+test-cases:
 - summary: |
     Проверка видимости товаров которых нет в наличии 
   status: pass
@@ -27,5 +28,5 @@
     Проверка фильтрацию по категориям товаров
   status: pass
  
- bugreports: []
+bugreports: []
 
