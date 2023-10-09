@@ -28,5 +28,79 @@ test-cases:
     Проверка фильтрацию по категориям товаров
   status: pass
  
-bugreports: []
+bugreports:
+- summary: >
+        Не загружается картинка смены языка 
+  environment: |
+      https://hexlet-products-store.vercel.app/ошибка загрузки/Google Chrome 117.0.5938.89 (Официальная сборка) (64 бит), Windows 10
+  steps-to-reproduce: |
+      - Открыть страницу магазина 
+      - Нажать на кнопку 'Language/язык'
+  expected-result: |
+      Отображение обоих картинок смены языка
+  actual-result: |
+      Картинка для языка 'English' не загружается
 
+- summary: >
+        Отсутствует название первого параметра в выборе категории товара
+  environment: |
+        https://products-store-git-v2bugfixes-hexlet-components.vercel.app/категории/Google Chrome 117.0.5938.89 (Официальная сборка) (64 бит), Windows 10
+  steps-to-reproduce: |
+        - Открыть страницу магазина 
+        - Нажать на кнопку категории/category
+  expected-result: |
+        Название вместо пустого пункта в вкладке 'category'
+  actual-result: |
+        Отсутствие названия в первом пункте в вкладке 'category'
+        
+- summary: >
+        Отсутствует возможность оплатить корзину
+  environment: |
+        https://products-store-git-v2bugfixes-hexlet-components.vercel.app//оплата/Google Chrome 117.0.5938.89 (Официальная сборка) (64 бит), Windows 10
+  steps-to-reproduce: |
+        - Открыть страницу магазина 
+        - Добавить любой товар в корзину нажав 'Add to cart'
+        - Перейти в корзину нажав кнопку 'cart'
+        - Нажать кнопку 'Checkout'
+  expected-result: |
+        Возможность оплатить товар
+  actual-result: |
+        Нету возможности оплатить товар
+
+- summary: >
+        Отсутствует возможность просмотреть полное описание в карточке товара
+  environment: |
+        https://products-store-git-v2bugfixes-hexlet-components.vercel.app/описание/Google Chrome 117.0.5938.89 (Официальная сборка) (64 бит), Windows 10
+  steps-to-reproduce: |
+        - Открыть страницу магазина 
+        - Перейти в карточку товара 'Iphone X'
+  expected-result: |
+        Возможность посмотреть полное описание товара
+  actual-result: |
+        Нету возможности посмотреть полное описание товара
+        
+- summary: >
+        Товары показываются не корректно при выборе категории и бренда
+  environment: |
+        https://products-store-git-v2bugfixes-hexlet-components.vercel.app//категории/Google Chrome 117.0.5938.89 (Официальная сборка) (64 бит), Windows 10
+  steps-to-reproduce: |
+       - Открыть страницу магазина 
+       - Выбрать в категории 'laptops'
+       - Выбрать в бренде 'Huawei'
+  expected-result: |
+        Должны быть ноутбуки от бренда Huawei или вовсе отсутствовать если таковых нету
+  actual-result: |
+         Выдает абсолютно разные товары 
+        
+- summary: >
+        Выпадает кнопка в карточке товара
+  environment: |
+        https://products-store-git-v2bugfixes-hexlet-components.vercel.app/категории/Google Chrome 117.0.5938.89 (Официальная сборка) (64 бит), Windows 10
+  steps-to-reproduce: |
+        - Открыть страницу магазина 
+        - Выбрать в категории 'groceries'
+        - Выбрать в бренде 'Baking Food Items'
+  expected-result: |
+        Кнопка 'Добавить в корзину' должна влезать в поле карточки товара
+  actual-result: |
+        Кнопка 'Добавить в корзину' выходить за рамки карточки товара
