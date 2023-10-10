@@ -117,3 +117,20 @@ bugreports:
         Корзина должна быть пуста
   actual-result: |
         При перезагрузки страницы очищенные товары остаются в корзине
+
+- summary: |
+    Нету обратного ответа от сервера при нажатии кнопки 'Checkout' в корзине
+  environment: |
+    https://products-store-git-v2bugfixes-hexlet-components.vercel.app/категории/Firefox 118.0.1 (64-разрядный) (Официальная сборка) (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+      - Зайти на страницу https://hexlet-products-store.vercel.app/
+      - Добавить товар в корзину нажав кнопку 'add to cart'
+      - Перейти в корзину нажав кнопку 'cart'
+      - Открыть Devtools 
+      - Нажать кнопку 'Checkout'
+  expected-result: |
+    В статусе сети должен присутствовать код '200' 
+  actual-result: |
+    В статусе сети отображается код '500'
+    Ошибка изображена на скриншоте (bug9.png)
