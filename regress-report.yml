@@ -119,7 +119,7 @@ bugreports:
         При перезагрузки страницы очищенные товары остаются в корзине
 
 - summary: |
-    Нету ответ от сервера при нажатии кнопки 'Checkout' в корзине
+    Нету ответа от сервера при нажатии кнопки 'Checkout' в корзине
   environment: |
     https://products-store-git-v2bugfixes-hexlet-components.vercel.app/категории/Firefox 118.0.1 (64-разрядный) (Официальная сборка) (64 бит)
     ОС Windows 10
